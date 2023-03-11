@@ -1,146 +1,173 @@
 .bayan {
-    max-width: 1920px;
-    margin: 0 auto;
-    padding: 5% 10%;
-    font-family: Arial, sans-serif;
-    font-size: 1rem;
-    color: blue;
-    transition: .3s;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 5% 10%;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  color: blue;
+  transition: 0.3s;
 }
 
-  h1 {
-    color: black;
-    font-size: 3rem;
+h1 {
+  color: black;
+  font-size: 3rem;
 }
 
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.title-input {
+    display: none;
+}
+
+.list-item {
+  margin-bottom: 3%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.item-title {
+  background-color: #f2f2f2;
+  padding: 1%;
+  cursor: pointer;
+}
+
+.title-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1%;
+}
+
+.icon {
+  visibility: hidden;
+  font-size: 2rem;
+  transition: 0.3s;
+}
+
+.mem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  background-color: #fff;
+}
+
+.mem-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  transition: width 0.3s;
+}
+
+img {
+  width: 100%;
+}
+
+.mem-input {
+  visibility: hidden;
+  transition: 0.3s;
+}
+.mem .mem-input:checked + .mem-label {
+  width: 70%;
+  transition: 0.3s;
+}
+
+.list-item:active .icon {
+  color: blue;
+}
+
+.list-item:active h2 {
+  color: blue;
+}
+
+@media (max-width: 1920px) {
   .bayan:hover {
     color: black;
-    transition: .3s;
-}
+    transition: 0.3s;
+  }
 
   .bayan:hover .icon {
     visibility: visible;
-    transition: .3s;
-}
-
-  .list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-  .list-item {
-    margin-bottom: 1%;
-}
-
-  .item-title {
-    background-color: #f2f2f2;
-    padding: 1%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-}
+    transition: 0.3s;
+  }
 
   .item-title:hover {
     background-color: #e6e6e6;
+  }
+
+  .list-item:focus .mem-label,
+  .list-item:hover .mem-label {
+    width: 70%;
+    transition: 0.3s;
+  }
+  .list-item:hover .icon {
+    transform: rotate(-90deg);
+    transition: 0.3s;
+  }
 }
+
+@media (max-width: 820px) {
+  .bayan {
+    color: black;
+    padding: 1%;
+  }
+
+  .icon{
+    visibility: visible;
+  }
+  .item-title:hover {
+    background-color: #f2f2f2;
+  }
+
+  .list-item:focus .mem-label,
+  .list-item:hover .mem-label {
+    width: 0%;
+    transition: 0.3s;
+  }
+  .list-item:hover .icon {
+    transform: rotate(0deg);
+    transition: 0.3s;
+  }
+  .mem .mem-input:checked + .mem-label {
+    width: 100%;
+    transition: 0.3s;
+  }
+
+  /* .list-item:active .mem-label {
+    width: 100%;
+  } */
+
+  .list-item .title-input:checked ~ .mem .mem-label {
+    width: 100%;
+    transition: .3s;
+  }
+}
+
+@media (max-width: 320px) {
+  .bayan {
+    font-size: 0.7rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .item-title {
+    padding: 0 6%;
+  }
 
   .icon {
-    visibility: hidden;
-    font-size: 2rem;
-    transition: .3s;
-}
+    font-size: 1.2rem;
+  }
 
-  .mem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1%;
-    background-color: #fff;
-}
-
-  label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 0;
-    transition: width .3s;
-}
-
-  img {
+  .mem .mem-input:checked + .mem-label {
     width: 100%;
+    transition: 0.3s;
+  }
 }
-
-  .list-item:focus label,
-  .list-item:hover label {
-    width: 70%;
-    transition: .3s;
-  }
-
-  .list-item:hover .icon{
-    transform: rotate(-90deg);
-    transition: .3s;
-  }
-
-  input {
-    visibility: hidden;
-    transition: .3s;
-  }
-  .mem input:checked + label {
-    width: 70%;
-    transition: .3s;
-  }
-
-  .list-item:active .icon {
-    color: blue;
-
-  }
-
-  .list-item:active h2 {
-    color: blue;
-  }
-
-  @media (max-width: 820px) {
-    .list-item:focus label,
-    .list-item:hover label {
-      width: 100%;
-      transition: .3s;
-    }
-
-    .mem input:checked + label {
-      width: 100%;
-      transition: .3s;
-    }
-  }
-
-  @media (max-width: 320px) {
-
-    .bayan {
-      font-size: .7rem;
-    }
-
-    h1 {
-      font-size: 1.5rem;
-    }
-
-    .item-title {
-      padding: 0 6%;
-    }
-
-    .icon {
-      font-size: 1.2rem;
-    }
-
-    .list-item:focus label,
-    .list-item:hover label {
-      width: 100%;
-      transition: .3s;
-    }
-
-    .mem input:checked + label {
-      width: 100%;
-      transition: .3s;
-    }
-  }
