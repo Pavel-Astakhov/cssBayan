@@ -24,13 +24,11 @@ h1 {
 }
 
 .list-item {
-  margin-bottom: 3%;
   display: flex;
   flex-direction: column-reverse;
 }
 
 .item-title {
-  background-color: #f2f2f2;
   padding: 1%;
   cursor: pointer;
 }
@@ -40,6 +38,7 @@ h1 {
     align-items: center;
     justify-content: space-between;
     padding: 0 1%;
+    background-color: #f2f2f2;
 }
 
 .icon {
@@ -74,7 +73,7 @@ img {
   transition: 0.3s;
 }
 .mem .mem-input:checked + .mem-label {
-  width: 70%;
+  width: 35%;
   transition: 0.3s;
 }
 
@@ -97,13 +96,13 @@ img {
     transition: 0.3s;
   }
 
-  .item-title:hover {
+  .title-label:hover {
     background-color: #e6e6e6;
   }
 
   .list-item:focus .mem-label,
   .list-item:hover .mem-label {
-    width: 70%;
+    width: 35%;
     transition: 0.3s;
   }
   .list-item:hover .icon {
@@ -121,7 +120,7 @@ img {
   .icon{
     visibility: visible;
   }
-  .item-title:hover {
+  .title-label:hover {
     background-color: #f2f2f2;
   }
 
