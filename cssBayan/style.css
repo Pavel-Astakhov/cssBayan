@@ -30,7 +30,6 @@ h1 {
 
 .item-title {
   padding: 1%;
-  cursor: pointer;
 }
 
 .title-label {
@@ -66,6 +65,7 @@ h1 {
 
 img {
   width: 100%;
+  cursor: pointer;
 }
 
 .mem-input {
@@ -98,6 +98,7 @@ img {
 
   .title-label:hover {
     background-color: #e6e6e6;
+    cursor: pointer;
   }
 
   .list-item:focus .mem-label,
@@ -137,10 +138,6 @@ img {
     width: 100%;
     transition: 0.3s;
   }
-
-  /* .list-item:active .mem-label {
-    width: 100%;
-  } */
 
   .list-item .title-input:checked ~ .mem .mem-label {
     width: 100%;
